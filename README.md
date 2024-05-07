@@ -1,9 +1,18 @@
-```c
-#include <stdio.h>
+```assembly
+format elf64
 
-int main(void)
-{
-        printf("Creating Raam kernel _/\\_\n");
-        return 0;
-}
+extrn printk
+
+public print_msg
+
+section '.text' executable
+
+print_msg:
+		mov rdi, msg
+		call printk
+		ret
+
+section '.data' writable
+
+msg db "_/\_ Creating Raam kernel _/\_", 10, 0
 ```
