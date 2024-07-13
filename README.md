@@ -14,5 +14,5 @@ print_msg:
 
 section '.data' writable
 
-msg db "_/\_ Creating Raam kernel _/\_", 10, 0
+msg db "_/\_ Creating Raam Computer Software System Core _/\_", 10, 0
 ```
